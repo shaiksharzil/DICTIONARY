@@ -135,14 +135,12 @@ let duplicateex = [...new Set(filteredarrayex)];
 }
 btn.addEventListener("click", result)
 input1.addEventListener("change", result    )
-let isplaying = false
 sound.addEventListener("click", function(){
-    if (isplaying) {
-        audio.pause();
-        audio.currentTime = 0
-        isplaying = false
-    } else {
-        audio.play()
-        isplaying = true
-    }
+    audio.currentTime = 0
+    audio.play();
+    sound.style.color = "#0766AD"
+    let    audur = audio.duration
+    setTimeout(() => {
+        sound.style.color = "black"
+    }, audur*1000);
 })
