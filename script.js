@@ -39,6 +39,8 @@ function result(){
     example.innerHTML = ""
     defhead.style.display = "none"
     exam.style.display = "none"
+    headsy.style.display =  "none"
+    synonym.style.display = "none"
    let input = input1.value
     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${input}`).then(function(res){
         if (res.status === 404) {
